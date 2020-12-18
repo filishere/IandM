@@ -1,0 +1,43 @@
+package oopp1;
+
+import java.util.Scanner;
+
+public class TriangleTest {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*
+		 * Circle circle = new Circle(1); System.out.println("A circle " +
+		 * circle.toString()); System.out.println("The color is " + circle.getColor());
+		 * System.out.println("The radius is " + circle.getRadius());
+		 * System.out.println("The area is " + circle.getArea());
+		 * System.out.println("The diameter is " + circle.getDiameter());
+		 
+		Rectangle rectangle = new Rectangle(2, 4);
+		System.out.println("\nA rectangle " + rectangle.toString());
+		System.out.println("The area is " + rectangle.getArea());
+		System.out.println("The perimeter is " + rectangle.getPerimeter()); */
+		Scanner sc = new Scanner(System.in);
+	
+		System.out.println("\nSide a: ");
+		double a = sc.nextDouble();
+		System.out.println("Side b: ");
+		double b = sc.nextDouble();
+		System.out.println("Side c: ");
+		double c = sc.nextDouble();
+		
+		sc.nextLine();
+		System.out.println("Color: ");
+		String color = sc.nextLine();
+		System.out.println("Filled: ");
+		boolean isFilled = sc.nextBoolean();
+		Triangle triangle = new Triangle (a, b, c);
+		triangle.setColor(color);
+		triangle.setFilled(isFilled);
+		System.out.println(triangle.printTriangle());
+		System.out.println(triangle.toString());
+		System.out.println("Perimeter: " + triangle.getPerimeter()
+									+ "Area: " + triangle.getArea());
+	
+		sc.close();
+	}
+}
